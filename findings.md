@@ -48,17 +48,17 @@ This report presents findings from a network traffic analysis conducted using Wi
 ### 1. Unusual DNS Requests
    - **Description**: We observed DNS queries for several unusual and non-existent domains, which might indicate malware trying to contact command-and-control (C2) servers.
    - **Details**:
-     - **Source IP**: `**replace with IP, e.g., 192.168.1.x**`
-     - **Destination IP**: `**replace with DNS server IP, e.g., 8.8.8.8**`
-     - **Domain Names Queried**: `randomname1.com`, `testexample.org`
+     - **Source IP**: `**192.168.85.129**`
+     - **Destination IP**: `**192.168.85.2**`
+     - **Domain Names Queried**: `randomname1.com`
    - **Screenshot**: Refer to [dns-lookup.png](./screenshots/dns-lookup.png)
    - **Packet Capture File**: Captured packets are stored in [suspicious-traffic.pcap](./wireshark-capture-files/suspicious-traffic.pcap).
 
 ### 2. Large Data Transfers
    - **Description**: Observed large data transfer sessions that could simulate data exfiltration attempts.
    - **Details**:
-     - **Source IP**: `**replace with IP, e.g., 192.168.1.x**`
-     - **Destination IP**: `**replace with receiving server IP, e.g., 192.168.1.200**`
+     - **Source IP**: `**192.168.85.129**`
+     - **Destination IP**: `**212.183.159.230**`
      - **Data Volume**: High volume, with packet sizes exceeding typical requests.
      - **Protocol**: TCP
    - **Screenshot**: Refer to [large-download.png](./screenshots/large-download.png)
