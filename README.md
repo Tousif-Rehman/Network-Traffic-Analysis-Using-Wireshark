@@ -21,15 +21,16 @@ The project is organized into the following directories and files:
 
 ```plaintext
 wireshark-network-traffic-analysis/
-├── README.md                    # Project overview and instructions
-├── findings.md                  # Report with analysis findings
-├── /screenshots                 # Screenshots of Wireshark suspicious activity views
-│   ├── dns-lookup.png           # Example of DNS request packet
-│   └── large-download.png       # Example of high-volume download traffic
-├── /wireshark-capture-files     # Folder to store Wireshark capture files (.pcap)
-│   └── suspicious-traffic.pcap  # Sample capture file for analysis
-└── /docs                        # Detailed steps and extra documentation
-    └── methodology.md           # Full documentation of project setup and analysis
+├── README.md                        # Project overview and instructions
+├── findings.md                      # Report with analysis findings
+├── /screenshots                     # Screenshots of Wireshark suspicious activity views
+│   ├── dns-lookup.png               # Example of DNS request packet
+│   └── large-download.png           # Example of high-volume download traffic
+├── /wireshark-capture-files         # Folder to store Wireshark capture files (.pcap)
+│   ├── suspicious-traffic.pcap      # Sample capture file for analysis
+│   └── suspicious-traffic-2.pcap    # Sample capture file for high-volume download traffic analysis
+└── /docs                            # Detailed steps and extra documentation
+    └── methodology.md               # Full documentation of project setup and analysis
 ```
 
 
