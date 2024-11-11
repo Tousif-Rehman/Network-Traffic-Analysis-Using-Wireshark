@@ -25,7 +25,6 @@ wireshark-network-traffic-analysis/
 ├── findings.md                  # Report with analysis findings
 ├── /screenshots                 # Screenshots of Wireshark suspicious activity views
 │   ├── dns-lookup.png           # Example of DNS request packet
-│   ├── failed-login.png         # Example of SSH failed login attempt
 │   └── large-download.png       # Example of high-volume download traffic
 ├── /wireshark-capture-files     # Folder to store Wireshark capture files (.pcap)
 │   └── suspicious-traffic.pcap  # Sample capture file for analysis
@@ -62,7 +61,6 @@ wireshark-network-traffic-analysis/
 
 ### Sample Filters Used
 - **DNS Traffic**: `dns`
-- **Failed SSH Logins**: `tcp.port == 22`
 - **High-Volume Downloads**: `tcp && frame.len > 1000`
 
 ---
@@ -70,8 +68,7 @@ wireshark-network-traffic-analysis/
 ## Analysis Process
 This project simulated various network events to identify suspicious activities, such as:
 1. **Unusual DNS Requests**: DNS lookups for non-existent or suspicious domains.
-2. **Failed SSH Login Attempts**: Frequent failed login attempts on SSH, which may suggest a brute-force attack.
-3. **Large Data Transfers**: High-volume file transfers that could indicate data exfiltration.
+2. **Large Data Transfers**: High-volume file transfers that could indicate data exfiltration.
 
 Details of these simulations and analysis can be found in the [`findings.md`](./findings.md) file.
 
@@ -80,8 +77,7 @@ Details of these simulations and analysis can be found in the [`findings.md`](./
 ## Findings
 The project’s findings include observed packet details and interpretations of possible security threats. Full analysis and packet details are documented in [`findings.md`](./findings.md), which provides a summary of:
 1. **DNS Requests to Suspicious Domains**
-2. **Brute Force Attempts on SSH**
-3. **High-Volume Data Transfers**
+2. **High-Volume Data Transfers**
 
 These findings illustrate basic traffic analysis techniques that can help in identifying potential cybersecurity threats in a network environment.
 
