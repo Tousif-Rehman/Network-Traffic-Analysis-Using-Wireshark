@@ -35,7 +35,7 @@ This project demonstrates how to use Wireshark, a powerful network analysis tool
 1. **Start Wireshark**: Open Wireshark on Kali Linux.
 2. **Choose Network Interface**: Select the active network interface (e.g., `eth0`, `wlan0`).
 3. **Start Capture**: Click "Start" to begin capturing network traffic.
-4. **Apply Filters**: Apply relevant filters to target specific traffic (e.g., `dns`, `tcp.port == 22`).
+4. **Apply Filters**: Apply relevant filters to target specific traffic (e.g., `dns`, `tcp && frame.len > 1000`).
 5. **Save Capture**: Stop the capture and save it as a `.pcap` file for analysis.
 
 ### Sample Filters Used
