@@ -33,7 +33,7 @@ This project demonstrates how to use Wireshark, a powerful network analysis tool
 
 ### Capturing Traffic in Wireshark
 1. **Start Wireshark**: Open Wireshark on Kali Linux.
-2. **Choose Network Interface**: Select the active network interface (e.g., `eth0`, `wlan0`).
+2. **Choose Network Interface**: Select the active network interface (`eth0`).
 3. **Start Capture**: Click "Start" to begin capturing network traffic.
 4. **Apply Filters**: Apply relevant filters to target specific traffic (e.g., `dns`, `tcp && frame.len > 1000`).
 5. **Save Capture**: Stop the capture and save it as a `.pcap` file for analysis.
@@ -41,6 +41,7 @@ This project demonstrates how to use Wireshark, a powerful network analysis tool
 ### Sample Filters Used
 - **DNS Traffic**: `dns`
 - **High-Volume Downloads**: `tcp && frame.len > 1000`
+- **FTP Traffic**: `ftp` – To capture FTP login traffic, specifically focusing on the `msfadmin` user login on Metasploitable.
 
 ---
 
@@ -48,6 +49,7 @@ This project demonstrates how to use Wireshark, a powerful network analysis tool
 This project simulated various network events to identify suspicious activities, such as:
 1. **Unusual DNS Requests**: DNS lookups for non-existent or suspicious domains.
 2. **Large Data Transfers**: High-volume file transfers that could indicate data exfiltration.
+3. **FTP Login Capture on Metasploitable**: Observing login details of the `msfadmin` user on an unencrypted FTP session to demonstrate the security risks of plaintext credential transmission.
 
 Details of these simulations and analysis can be found in the [`findings.md`](./findings.md) file.
 
@@ -57,6 +59,7 @@ Details of these simulations and analysis can be found in the [`findings.md`](./
 The project’s findings include observed packet details and interpretations of possible security threats. Full analysis and packet details are documented in [`findings.md`](./findings.md), which provides a summary of:
 1. **DNS Requests to Suspicious Domains**
 2. **High-Volume Data Transfers**
+3. **FTP Login Capture on Metasploitable**: Demonstrates how plaintext FTP credentials, such as those of the `msfadmin` user, can be intercepted during transmission.
 
 These findings illustrate basic traffic analysis techniques that can help in identifying potential cybersecurity threats in a network environment.
 
